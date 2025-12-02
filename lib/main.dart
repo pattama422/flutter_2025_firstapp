@@ -51,6 +51,7 @@ double _change = 0;
         padding: const EdgeInsets.all(16.0),
         child: Column(
           children: [
+            Text("Change Calculation", style: TextStyle(fontFamily: "maa"),),
             Padding(
               padding: const EdgeInsets.all(8.0),
               child: priceTextField(),
