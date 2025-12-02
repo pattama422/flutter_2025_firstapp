@@ -51,7 +51,9 @@ double _change = 0;
         padding: const EdgeInsets.all(16.0),
         child: Column(
           children: [
-            Text("Change Calculation", style: TextStyle(fontFamily: "maa"),),
+            Text("Change Calculation", style: TextStyle(fontFamily: "maa",
+            fontSize: 48, fontWeight: FontWeight.bold, fontStyle: FontStyle.italic, color: Colors.deepPurple, backgroundColor: Colors.blue),),
+            Image.asset("images/apple-iphone-jet-black-mobile-png-10.png", height: 240,),
             Padding(
               padding: const EdgeInsets.all(8.0),
               child: priceTextField(),
