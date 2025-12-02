@@ -125,11 +125,18 @@ Widget receiveMoneyTextField() {
 }
 
 Widget changeCalculateButton() {
-  return ElevatedButton(onPressed: (){}, child: Text("Calculate Change"));
+  return ElevatedButton(onPressed: (){
+    if(price.text.isNotEmpty && amount.text.isNotEmpty){
+      setState(() {
+        _change = double.parse(change.text)-_total;
+    
+      });
+    }
+  }, child: Text("Calculate Change"));
 }
 
 Widget showChangeText() {
-  return Text("Change:Baht");
+  return Text("Change: $_change:Baht");
 }
 
   
