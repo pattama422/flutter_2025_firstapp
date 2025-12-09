@@ -49,7 +49,7 @@ double _change = 0;
       ),
       body: Padding(
         padding: const EdgeInsets.all(16.0),
-        child: Column(
+        child: ListView(
           children: [
             Text("Change Calculation", style: TextStyle(fontFamily: "maa",
             fontSize: 48, fontWeight: FontWeight.bold, fontStyle: FontStyle.italic, color: Colors.deepPurple, backgroundColor: Colors.blue),),
