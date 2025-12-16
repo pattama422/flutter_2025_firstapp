@@ -1,3 +1,6 @@
+import 'package:firstapp/pages/cals.dart';
+import 'package:firstapp/pages/contact.dart';
+import 'package:firstapp/pages/home.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -32,14 +35,36 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
- // variable
+
+  int _currentIndex = 0;
+  final tabs = [HomePage(), CalculatePage(), ContactPage()];
   @override
   Widget build(BuildContext context) {
-    return Text("Hello World");
-    //return Scaffold: title and body
+    return Scaffold(
+      appBar: AppBar(
+        backgroundColor: Theme.of(context).colorScheme.inversePrimary,
+        title: Text(widget.title),
+      ),
+      body:
+      tabs[_currentIndex],bottomNavigationBar: BottomNavigationBar(currentIndex: _currentIndex,items: [
+        BottomNavigationBarItem(icon: Icon(Icons.home), label: "Home"),
+        BottomNavigationBarItem(icon: Icon(Icons.calculate), label: "Calculation"),
+        BottomNavigationBarItem(icon: Icon(Icons.contact_page), label: "Contact")
+      ],
+      onTap: (index){
+        setState(() {
+          // print(index);
+          _currentIndex = index;
+        });
+      },
+      
+      
+      ),
+    );
+   
   }
 
-//custom widget
+
 
   
 }

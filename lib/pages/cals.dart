@@ -18,14 +18,7 @@ double _change = 0;
   @override
   Widget build(BuildContext context) {
     //return scaffold: appbar and body
-    return Scaffold(
-      appBar: AppBar(
-        backgroundColor: Theme.of(context).colorScheme.inversePrimary,
-        title: Text("Calculate Change"),
-      ),
-      body: Padding(
-        padding: const EdgeInsets.all(16.0),
-        child: ListView(
+    return ListView(
           children: [
             Text("Change Calculation", style: TextStyle(fontFamily: "maa",
             fontSize: 48, fontWeight: FontWeight.bold, fontStyle: FontStyle.italic, color: Colors.deepPurple, backgroundColor: Colors.blue),),
@@ -53,9 +46,7 @@ double _change = 0;
             changeCalculateButton(),
             showChangeText(),
           ],
-        ),
-      ),
-    );
+        );
   }
 
 //custom widget
