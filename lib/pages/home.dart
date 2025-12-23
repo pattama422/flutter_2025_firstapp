@@ -34,17 +34,23 @@ class _HomePageState extends State<HomePage> {
         color: Colors.deepPurple[200],
         borderRadius: BorderRadius.circular(24),
         image: DecorationImage(image:   NetworkImage("https://cdn.pixabay.com/photo/2015/05/15/02/07/computer-767781_1280.jpg"),
-        fit: BoxFit.cover),
+        fit: BoxFit.cover, 
+        colorFilter: ColorFilter.mode(Colors.black.withOpacity(0.7), BlendMode.darken)),
         
       ),
       child: Column(
         mainAxisAlignment: MainAxisAlignment.start,
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Text("What is a computer?", style: TextStyle(fontSize: 25)),
+          Text("What is a computer?", 
+          style: TextStyle(fontSize: 25,
+          color: Colors.white, 
+          fontWeight: FontWeight.bold)),
+          SizedBox(height: 24,),
           Text(
             "A computer is a machine that can be programmed to automatically carry out sequences of arithmetic or logical operations (computation).",
-            style: TextStyle(fontSize: 15),
+            style: TextStyle(fontSize: 15,
+            color: Colors.white),
           ),
         ],
       ),

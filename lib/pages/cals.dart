@@ -19,36 +19,37 @@ double _change = 0;
   Widget build(BuildContext context) {
     //return scaffold: appbar and body
     return 
-    
-    ListView(
-          children: [
-            Text("Change Calculation", style: TextStyle(fontFamily: "maa",
-            fontSize: 48, fontWeight: FontWeight.bold, fontStyle: FontStyle.italic, color: Colors.deepPurple, backgroundColor: Colors.blue),),
-            Image.asset("images/apple-iphone-jet-black-mobile-png-10.png", height: 240,),
-            Image.network(
-  'https://docs.flutter.dev/assets/images/dash/dash-fainting.gif', height: 120,
-),
-            Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: priceTextField(),
-            ),
-            Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: amountTextField(),
-            ),
-            SizedBox(height: 8),
-            calculateButton(),
-            showTotalText(),
-            SizedBox(height: 8),
-            Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: receiveMoneyTextField(),
-            ),
-            SizedBox(height: 8),
-            changeCalculateButton(),
-            showChangeText(),
-          ],
-        );
+    Material(
+      child: ListView(
+            children: [
+              Text("Change Calculation", style: TextStyle(fontFamily: "maa",
+              fontSize: 48, fontWeight: FontWeight.bold, fontStyle: FontStyle.italic, color: Colors.deepPurple, backgroundColor: Colors.blue),),
+              Image.asset("images/apple-iphone-jet-black-mobile-png-10.png", height: 240,),
+              Image.network(
+        'https://docs.flutter.dev/assets/images/dash/dash-fainting.gif', height: 120,
+      ),
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: priceTextField(),
+              ),
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: amountTextField(),
+              ),
+              SizedBox(height: 8),
+              calculateButton(),
+              showTotalText(),
+              SizedBox(height: 8),
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: receiveMoneyTextField(),
+              ),
+              SizedBox(height: 8),
+              changeCalculateButton(),
+              showChangeText(),
+            ],
+          ),
+    );
   }
 
 //custom widget
