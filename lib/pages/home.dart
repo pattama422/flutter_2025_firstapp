@@ -16,17 +16,17 @@ class _HomePageState extends State<HomePage> {
       padding: const EdgeInsets.all(24.0),
       child: ListView(
         children: [
-          MyBox(),
+          MyBox("What is a computer?", "A computer is a machine that can be programmed to automatically carry out sequences of arithmetic or logical operations (computation)."),
           SizedBox(height: 24),
-          MyBox(),
+          MyBox("What is a flutter?", "Flutter is an open-source UI software development kit created by Google."),
           SizedBox(height: 24),
-          MyBox(),
+          MyBox("What is a Dart?", "Dart is a general-purpose programming language developed by Google, designed for building web, server, and mobile applications."),
         ],
       ),
     );
   }
 
-  Widget MyBox() {
+  Widget MyBox(String title, String subtitle) {
     return Container(
       padding: EdgeInsets.all(24),
       height: 150,
@@ -41,14 +41,14 @@ class _HomePageState extends State<HomePage> {
       child: Column(
         mainAxisAlignment: MainAxisAlignment.start,
         crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          Text("What is a computer?", 
+        children:  [
+          Text(title, 
           style: TextStyle(fontSize: 25,
           color: Colors.white, 
           fontWeight: FontWeight.bold)),
           SizedBox(height: 24,),
           Text(
-            "A computer is a machine that can be programmed to automatically carry out sequences of arithmetic or logical operations (computation).",
+           subtitle,
             style: TextStyle(fontSize: 15,
             color: Colors.white),
           ),
