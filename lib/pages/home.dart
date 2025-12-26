@@ -1,5 +1,4 @@
-import 'dart:math';
-
+import 'package:firstapp/pages/details.dart';
 import 'package:flutter/material.dart';
 
 class HomePage extends StatefulWidget {
@@ -16,11 +15,11 @@ class _HomePageState extends State<HomePage> {
       padding: const EdgeInsets.all(24.0),
       child: ListView(
         children: [
-          MyBox("What is a computer?", "A computer is a machine that can be programmed to automatically carry out sequences of arithmetic or logical operations (computation)."),
+          MyBox("What is a computer?", "A computer is a machine that can be programmed to automatically."),
           SizedBox(height: 24),
           MyBox("What is a flutter?", "Flutter is an open-source UI software development kit created by Google."),
           SizedBox(height: 24),
-          MyBox("What is a Dart?", "Dart is a general-purpose programming language developed by Google, designed for building web, server, and mobile applications."),
+          MyBox("What is a Dart?", "Dart is a general-purpose programming language developed by Google."),
         ],
       ),
     );
@@ -29,7 +28,7 @@ class _HomePageState extends State<HomePage> {
   Widget MyBox(String title, String subtitle) {
     return Container(
       padding: EdgeInsets.all(24),
-      height: 150,
+      height: 185,
       decoration: BoxDecoration(
         color: Colors.deepPurple[200],
         borderRadius: BorderRadius.circular(24),
@@ -52,6 +51,10 @@ class _HomePageState extends State<HomePage> {
             style: TextStyle(fontSize: 15,
             color: Colors.white),
           ),
+           SizedBox(height: 24,),
+           TextButton(onPressed: (){
+            Navigator.push(context, MaterialPageRoute(builder: (context)=> DeatilsPage()));
+           }, child: Text("read more", style: TextStyle(color: const Color.fromARGB(255, 206, 160, 175),)))
         ],
       ),
     );
