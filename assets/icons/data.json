@@ -1,0 +1,17 @@
+[
+    {
+        "title": "What is a computer?",
+        "subtitle": "A computer is a machine that can be programmed to automatically",
+        "image_url": "https://cdn.pixabay.com/photo/2015/05/15/02/07/computer-767781_1280.jpg"
+    },
+    {
+        "title": "What is a flutter?",
+        "subtitle": "Flutter is an open-source UI software development kit created by Google.",
+        "image_url": "https://cdn.pixabay.com/photo/2015/05/15/02/07/computer-767781_1280.jpg"
+    },
+    {
+        "title": "What is a Dart?",
+        "subtitle": "Dart is a general-purpose programming language developed by Google.",
+        "image_url": "https://cdn.pixabay.com/photo/2015/05/15/02/07/computer-767781_1280.jpg"
+    }
+]
